@@ -5,6 +5,6 @@ class PlayerPerspectiveModel {
   PlayerPerspectiveModel(this.id, this.name);
 
   PlayerPerspectiveModel.fromJson(Map<String, dynamic> json)
-      : id = json["checksum"],
+      : id = json["id"],
         name = json["name"];
 }

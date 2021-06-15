@@ -5,6 +5,6 @@ class ModeModel {
   ModeModel(this.id, this.name);
 
   ModeModel.fromJson(Map<String, dynamic> json)
-      : id = json["checksum"],
+      : id = json["id"],
         name = json["name"];
 }

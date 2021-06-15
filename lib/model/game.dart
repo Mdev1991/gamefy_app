@@ -42,7 +42,7 @@ class GameModel {
       this.name);
 
   GameModel.fromJson(Map<String, dynamic> json)
-      : id = json["checksum"],
+      : id = json["id"],
         cover =
             json["cover"] == null ? null : CoverModel.fromJson(json["cover"]),
         createdAt = json["created_at"],

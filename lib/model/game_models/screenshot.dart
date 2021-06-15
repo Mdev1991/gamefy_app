@@ -6,7 +6,7 @@ class ScreenshotModel {
   ScreenshotModel(this.id, this.url, this.imageId);
 
   ScreenshotModel.fromJson(Map<String, dynamic> json)
-      : id = json["checksum"],
+      : id = json["id"],
         url = json["url"],
         imageId = json["image_id"];
 }
