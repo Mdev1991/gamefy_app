@@ -43,6 +43,7 @@ dependencies:
   page_indicator: ^0.2.0
   sleek_circular_slider: ^1.1.0
   youtube_player_flutter: ^7.0.0+7
+  animated_splash_screen: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,7 @@ flutter:
   uses-material-design: true
 
   assets:
-     - assets/img/placeholder.jpg
+     - assets/img/logo.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

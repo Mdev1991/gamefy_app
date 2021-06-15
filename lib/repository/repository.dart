@@ -6,8 +6,8 @@ import 'package:igdb/model/game_response.dart';
 class GameRepository {
   static String mainUrl = "https://api.igdb.com/v4";
   var gameListUrl = '$mainUrl/games';
-  final String clientId = "rag9sxauhjla6abr42nh5k69ggm5cb";
-  final String bearerToken = "Bearer xw1dfh2je1foaxpo79ennpbjbwsho2";
+  final String clientId = "ikefu3gjaojsnnt21ik7orxyofnztq";
+  final String bearerToken = "Bearer 7uv1sowo4x4i6caxgdafq58tczc8f8";
   final Dio _dio = Dio();
 
   Future<GameResponse> getGames() async {
@@ -32,7 +32,7 @@ class GameRepository {
     var response = await http.post(gameListUrl,
         headers: {"Client-ID": "$clientId", "Authorization": "$bearerToken"},
         body:
-            "fields artworks,bundles,category,id,collection,cover.*,created_at,first_release_date,follows,game_engines.*,game_modes.*,release_dates, genres.*,hypes,keywords.*,multiplayer_modes,name,parent_game,platforms.*, platforms.platform_logo.*, player_perspectives.*,rating,rating_count,screenshots.*,slug,standalone_expansions,status,storyline,summary,tags,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos.*;where cover.image_id != null & genres != null & videos != null & created_at > 1252214987 & platforms = $platformId & rating > 80; limit 100;");
+            "fields artworks,bundles,category,checksum,collection,cover.*,created_at,first_release_date,follows,game_engines.*,game_modes.*,release_dates, genres.*,hypes,keywords.*,multiplayer_modes,name,parent_game,platforms.*, platforms.platform_logo.*, player_perspectives.*,rating,rating_count,screenshots.*,slug,standalone_expansions,status,storyline,summary,tags,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos.*;where cover.image_id != null & genres != null & videos != null & created_at > 1252214987 & platforms = $platformId & rating > 80; limit 100;");
     print("${response.body}");
     return GameResponse.fromJson(jsonDecode(response.body));
   }

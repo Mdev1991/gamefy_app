@@ -91,7 +91,7 @@ class _HomeSliderState extends State<HomeSlider> {
                             image: new DecorationImage(
                                 fit: BoxFit.cover,
                                 image: NetworkImage(
-                                    "https://images.igdb.com/igdb/image/upload/screenshot_huge/${games[index].screenshots[0].imageId}.jpg")),
+                                    "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/${games[index].screenshots[0].imageId}.jpg")),
                           )),
                     ),
                     SizedBox(
@@ -125,7 +125,7 @@ class _HomeSliderState extends State<HomeSlider> {
                                       BorderRadius.all(Radius.circular(5.0)),
                                   image: DecorationImage(
                                       image: NetworkImage(
-                                        "https://images.igdb.com/igdb/image/upload/cover_big/${games[index].cover.imageId}.jpg",
+                                        "https://images.igdb.com/igdb/image/upload/t_cover_big/${games[index].cover.imageId}.jpg",
                                       ),
                                       fit: BoxFit.cover)),
                             ),
