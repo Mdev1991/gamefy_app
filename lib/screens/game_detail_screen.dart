@@ -25,8 +25,8 @@ class _GameDetailScreenState extends State<GameDetailScreen>
   TabController _tabController;
   final GameModel game;
   final tabs = <Item>[
-    Item(id: 0, name: "OVERVIEW"),
-    Item(id: 1, name: "SCREESHOTS")
+    Item(id: 0, name: "overview".toUpperCase()),
+    Item(id: 1, name: "screenshots".toUpperCase())
   ];
   final customColors = CustomSliderColors(
       dotColor: Colors.white.withOpacity(0.8),

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
         home: AnimatedSplashScreen(
           duration: 2500,
-          splashIconSize: double.maxFinite,
+          splashIconSize: maxFinite,
           splash: Image.asset('assets/img/logo.png'),
           splashTransition: SplashTransition.scaleTransition,
           nextScreen: MainScreen(),

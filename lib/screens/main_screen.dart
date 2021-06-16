@@ -73,7 +73,12 @@ class _MainScreenState extends State<MainScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HomeSlider(),
+                Container(
+                  height: 120,
+                  child: Expanded(
+                    child: HomeImage(),
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -199,23 +204,6 @@ class _MainScreenState extends State<MainScreen> {
                   SimpleLineIcons.layers,
                   size: 18.0,
                   color: _currentIndex == 2
-                      ? Style.Colors.mainColor
-                      : Colors.white,
-                ),
-              ),
-            ),
-            BottomNavyBarItem(
-              activeColor: Color(0xFF010101),
-              title: Text(
-                ' Profile',
-                style: TextStyle(color: Style.Colors.mainColor, fontSize: 13.0),
-              ),
-              icon: Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Icon(
-                  SimpleLineIcons.user,
-                  size: 18.0,
-                  color: _currentIndex == 3
                       ? Style.Colors.mainColor
                       : Colors.white,
                 ),
