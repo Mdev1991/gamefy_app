@@ -4,7 +4,9 @@ Widget buildLoadingWidget() {
   return Center(
     child: Column(
       children: [
-        CircularProgressIndicator(),
+        CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation(Colors.greenAccent[400]),
+        ),
       ],
     ),
   );

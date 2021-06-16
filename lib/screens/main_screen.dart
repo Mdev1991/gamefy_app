@@ -1,4 +1,4 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:igdb/bloc/switch_bloc.dart';
@@ -14,7 +14,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _currentIndex = 0;
   PageController _pageController;
   SwitchBloc _switchBloc;
   GlobalKey bottomNavigationKey = GlobalKey();
@@ -46,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Color(0xFF20232a),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(0.0),
+        preferredSize: Size.fromHeight(45.0),
         child: AppBar(
           elevation: 0.5,
           iconTheme: IconThemeData(
@@ -54,9 +53,28 @@ class _MainScreenState extends State<MainScreen> {
           ),
           centerTitle: true,
           backgroundColor: Style.Colors.backgroundColor,
-          title: Text(
-            "IGDB",
-            style: TextStyle(color: Colors.white, fontSize: 17.0),
+          title: SizedBox(
+            width: 95.0,
+            child: DefaultTextStyle(
+              style: const TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                shadows: [
+                  Shadow(
+                    blurRadius: 7.0,
+                    color: Colors.white,
+                    offset: Offset(0, 0),
+                  ),
+                ],
+              ),
+              child: AnimatedTextKit(
+                repeatForever: true,
+                animatedTexts: [
+                  FlickerAnimatedText('gamefy'.toUpperCase()),
+                ],
+                onTap: () {},
+              ),
+            ),
           ),
           actions: [],
         ),
@@ -65,20 +83,13 @@ class _MainScreenState extends State<MainScreen> {
         child: PageView(
           physics: NeverScrollableScrollPhysics(),
           controller: _pageController,
-          onPageChanged: (index) {
-            setState(() => _currentIndex = index);
-          },
+          onPageChanged: (index) {},
           children: <Widget>[
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: 120,
-                  child: Expanded(
-                    child: HomeImage(),
-                  ),
-                ),
+                HomeSlider(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -90,7 +101,7 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(
                             fontSize: 14.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                            color: Colors.greenAccent[400]),
                       ),
                     ),
                     StreamBuilder<SwitchItem>(
@@ -106,12 +117,12 @@ class _MainScreenState extends State<MainScreen> {
                                   SimpleLineIcons.list,
                                   size: 18.0,
                                 ),
-                                color: Colors.white,
+                                color: Colors.greenAccent[400],
                                 onPressed: _showSingle);
                           case SwitchItem.GRID:
                             return IconButton(
                                 icon: Icon(SimpleLineIcons.grid, size: 18.0),
-                                color: Colors.white,
+                                color: Colors.greenAccent[400],
                                 onPressed: _showList);
                         }
                       },
@@ -135,79 +146,6 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
               ],
-            ),
-            Container(
-              color: Style.Colors.backgroundColor,
-            ),
-            Container(
-              color: Style.Colors.backgroundColor,
-            ),
-            Container(
-              color: Style.Colors.backgroundColor,
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Container(
-        child: BottomNavyBar(
-          containerHeight: 56.0,
-          backgroundColor: Style.Colors.backgroundColor,
-          selectedIndex: _currentIndex,
-          onItemSelected: (index) {
-            setState(() => _currentIndex = index);
-            _pageController.jumpToPage(index);
-          },
-          items: <BottomNavyBarItem>[
-            BottomNavyBarItem(
-              activeColor: Color(0xFF010101),
-              title: Text(
-                ' Discover',
-                style: TextStyle(color: Style.Colors.mainColor, fontSize: 13.0),
-              ),
-              icon: Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Icon(
-                  SimpleLineIcons.game_controller,
-                  size: 18.0,
-                  color: _currentIndex == 0
-                      ? Style.Colors.mainColor
-                      : Colors.white,
-                ),
-              ),
-            ),
-            BottomNavyBarItem(
-              activeColor: Color(0xFF010101),
-              title: Text(
-                ' Search',
-                style: TextStyle(color: Style.Colors.mainColor, fontSize: 13.0),
-              ),
-              icon: Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Icon(
-                  SimpleLineIcons.magnifier,
-                  size: 18.0,
-                  color: _currentIndex == 1
-                      ? Style.Colors.mainColor
-                      : Colors.white,
-                ),
-              ),
-            ),
-            BottomNavyBarItem(
-              activeColor: Color(0xFF010101),
-              title: Text(
-                ' Console',
-                style: TextStyle(color: Style.Colors.mainColor, fontSize: 13.0),
-              ),
-              icon: Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Icon(
-                  SimpleLineIcons.layers,
-                  size: 18.0,
-                  color: _currentIndex == 2
-                      ? Style.Colors.mainColor
-                      : Colors.white,
-                ),
-              ),
             ),
           ],
         ),

@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           splash: Image.asset('assets/img/logo.png'),
           splashTransition: SplashTransition.scaleTransition,
           nextScreen: MainScreen(),
-          backgroundColor: Colors.blueGrey[800],
+          backgroundColor: Colors.blueGrey[900],
         ));
   }
 }

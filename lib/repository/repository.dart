@@ -33,7 +33,7 @@ class GameRepository {
         headers: {"Client-ID": "$clientId", "Authorization": "$bearerToken"},
         body:
             "fields artworks,bundles,category,checksum,collection,cover.*,created_at,first_release_date,follows,game_engines.*,game_modes.*,release_dates, genres.*,hypes,keywords.*,multiplayer_modes,name,parent_game,platforms.*, platforms.platform_logo.*, player_perspectives.*,rating,rating_count,screenshots.*,slug,standalone_expansions,status,storyline,summary,tags,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos.*;where cover.image_id != null & genres != null & videos != null & created_at > 1252214987 & platforms = $platformId & rating > 80; limit 100;");
-    print("${response.body}");
+    print("${response.statusCode}");
     return GameResponse.fromJson(jsonDecode(response.body));
   }
 
@@ -42,7 +42,7 @@ class GameRepository {
         headers: {"Client-ID": "$clientId", "Authorization": "$bearerToken"},
         body:
             "fields artworks,bundles,category,id,collection,cover.*,created_at,first_release_date,follows,game_engines.*,game_modes.*,release_dates, genres.*,hypes,keywords.*,multiplayer_modes,name,parent_game,platforms.*, platforms.platform_logo.*, player_perspectives.*,rating,rating_count,screenshots.*,slug,standalone_expansions,status,storyline,summary,tags,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos.*;where cover.image_id != null & screenshots != null & created_at > 1252214987 & platforms = $platformId; limit 100; sort created_at asc;");
-    print("${response.body}");
+    print("${response.statusCode}");
     return GameResponse.fromJson(jsonDecode(response.body));
   }
 }

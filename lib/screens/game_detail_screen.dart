@@ -30,7 +30,7 @@ class _GameDetailScreenState extends State<GameDetailScreen>
   ];
   final customColors = CustomSliderColors(
       dotColor: Colors.white.withOpacity(0.8),
-      trackColor: Style.Colors.grey,
+      trackColor: Style.Colors.green,
       progressBarColor: Style.Colors.mainColor,
       hideShadow: true);
   _GameDetailScreenState(this.game);
@@ -135,7 +135,7 @@ class _GameDetailScreenState extends State<GameDetailScreen>
                     game.name,
                     style: TextStyle(
                         height: 1.5,
-                        color: Colors.white,
+                        color: Colors.greenAccent[400],
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0),
                   )),
@@ -171,7 +171,7 @@ class _GameDetailScreenState extends State<GameDetailScreen>
                           style: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                              color: Colors.greenAccent[400]),
                         ),
                       ),
                       Padding(
@@ -191,7 +191,7 @@ class _GameDetailScreenState extends State<GameDetailScreen>
                           style: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                              color: Colors.greenAccent[400]),
                         ),
                       ),
                       Container(
@@ -232,7 +232,7 @@ class _GameDetailScreenState extends State<GameDetailScreen>
                           style: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                              color: Colors.greenAccent[400]),
                         ),
                       ),
                       Container(
@@ -328,14 +328,16 @@ class _GameDetailScreenState extends State<GameDetailScreen>
         .map((screenshot) => Container(
               padding: EdgeInsets.only(
                   left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    shape: BoxShape.rectangle,
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(
-                            "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/${screenshot.imageId}.jpg"))),
+              child: GestureDetector(
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      shape: BoxShape.rectangle,
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                              "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/${screenshot.imageId}.jpg"))),
+                ),
               ),
             ))
         .toList();
