@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:igdb/bloc/get_slider_bloc.dart';
-import 'package:igdb/elements/error_element.dart';
-import 'package:igdb/elements/loader_element.dart';
-import 'package:igdb/model/game.dart';
-import 'package:igdb/model/game_response.dart';
-import 'package:igdb/style/theme.dart' as Style;
+import 'package:GameFy/bloc/get_slider_bloc.dart';
+import 'package:GameFy/elements/error_element.dart';
+import 'package:GameFy/elements/loader_element.dart';
+import 'package:GameFy/model/game.dart';
+import 'package:GameFy/model/game_response.dart';
+import 'package:GameFy/style/theme.dart' as Style;
 import 'package:page_indicator/page_indicator.dart';
 
 class HomeSlider extends StatefulWidget {

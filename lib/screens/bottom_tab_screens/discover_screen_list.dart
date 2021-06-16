@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:igdb/bloc/get_games_bloc.dart';
-import 'package:igdb/elements/error_element.dart';
-import 'package:igdb/elements/loader_element.dart';
-import 'package:igdb/model/game.dart';
-import 'package:igdb/model/game_response.dart';
-import 'package:igdb/screens/game_detail_screen.dart';
+import 'package:GameFy/bloc/get_games_bloc.dart';
+import 'package:GameFy/elements/error_element.dart';
+import 'package:GameFy/elements/loader_element.dart';
+import 'package:GameFy/model/game.dart';
+import 'package:GameFy/model/game_response.dart';
+import 'package:GameFy/screens/game_detail_screen.dart';
 
 class DiscoverScreenList extends StatefulWidget {
   @override

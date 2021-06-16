@@ -1,10 +1,10 @@
-import 'package:igdb/model/game_models/genre.dart';
-import 'package:igdb/model/game_models/keyword.dart';
-import 'package:igdb/model/game_models/mode.dart';
-import 'package:igdb/model/game_models/platform.dart';
-import 'package:igdb/model/game_models/player_perspective.dart';
-import 'package:igdb/model/game_models/screenshot.dart';
-import 'package:igdb/model/game_models/video.dart';
+import 'package:GameFy/model/game_models/genre.dart';
+import 'package:GameFy/model/game_models/keyword.dart';
+import 'package:GameFy/model/game_models/mode.dart';
+import 'package:GameFy/model/game_models/platform.dart';
+import 'package:GameFy/model/game_models/player_perspective.dart';
+import 'package:GameFy/model/game_models/screenshot.dart';
+import 'package:GameFy/model/game_models/video.dart';
 import 'game_models/cover.dart';
 
 class GameModel {

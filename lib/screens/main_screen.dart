@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:igdb/bloc/switch_bloc.dart';
-import 'package:igdb/style/theme.dart' as Style;
-import 'package:igdb/widgets/home_slider.dart';
+import 'package:GameFy/bloc/switch_bloc.dart';
+import 'package:GameFy/style/theme.dart' as Style;
+import 'package:GameFy/widgets/home_slider.dart';
 
 import 'bottom_tab_screens/discover_screen_grid.dart';
 import 'bottom_tab_screens/discover_screen_list.dart';

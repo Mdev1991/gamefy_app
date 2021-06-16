@@ -3,10 +3,10 @@ import 'dart:ui';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:igdb/model/game.dart';
-import 'package:igdb/model/game_models/screenshot.dart';
-import 'package:igdb/model/item.dart';
-import 'package:igdb/style/theme.dart' as Style;
+import 'package:GameFy/model/game.dart';
+import 'package:GameFy/model/game_models/screenshot.dart';
+import 'package:GameFy/model/item.dart';
+import 'package:GameFy/style/theme.dart' as Style;
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
-import 'package:igdb/model/game_response.dart';
+import 'package:GameFy/model/game_response.dart';
 
 class GameRepository {
   static String mainUrl = "https://api.igdb.com/v4";
