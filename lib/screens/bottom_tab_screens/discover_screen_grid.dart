@@ -74,7 +74,7 @@ class _DiscoverScreenGridState extends State<DiscoverScreenGrid> {
                 (int index) {
                   return AnimationConfiguration.staggeredGrid(
                     position: index,
-                    duration: const Duration(milliseconds: 375),
+                    duration: const Duration(milliseconds: 300),
                     columnCount: 3,
                     child: ScaleAnimation(
                       child: FadeInAnimation(
@@ -128,7 +128,7 @@ class _DiscoverScreenGridState extends State<DiscoverScreenGrid> {
                                 bottom: 20.0,
                                 left: 5.0,
                                 child: Container(
-                                  width: 90.0,
+                                  width: 100.0,
                                   child: Text(
                                     games[index].name,
                                     overflow: TextOverflow.ellipsis,
