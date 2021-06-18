@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:GameFy/bloc/get_slider_bloc.dart';
 import 'package:GameFy/elements/error_element.dart';
-import 'package:GameFy/elements/loader_element.dart';
 import 'package:GameFy/model/game.dart';
 import 'package:GameFy/model/game_response.dart';
 import 'package:GameFy/style/theme.dart' as Style;
 import 'package:page_indicator/page_indicator.dart';
+import 'package:GameFy/elements/slide_loader.dart';
 
 class HomeSlider extends StatefulWidget {
   @override
@@ -35,7 +35,7 @@ class _HomeSliderState extends State<HomeSlider> {
         } else if (snapshot.hasError) {
           return buildErrorWidget(snapshot.error);
         } else {
-          return buildLoadingWidget();
+          return buildSliderLoadWidget();
         }
       },
     );
