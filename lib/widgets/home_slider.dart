@@ -19,7 +19,7 @@ class _HomeSliderState extends State<HomeSlider> {
   @override
   void initState() {
     super.initState();
-    getSliderBloc..getSlider(48);
+    getSliderBloc..getSlider(6);
   }
 
   @override
