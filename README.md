@@ -20,8 +20,6 @@ Technologies:
   animated_splash_screen: ^1.1.0
   animated_text_kit: ^4.2.1
 
-PREVIEW
+#**DEMO**
 
-![Alt Text](https://media.giphy.com/media/X1hcGgPdiNgvVJvA3J/giphy.gif)
-
-![Alt Text](https://media.giphy.com/media/o6Z0a7SjU5JqNRF1Oe/giphy.gif)
+![Alt Text](https://media.giphy.com/media/X1hcGgPdiNgvVJvA3J/giphy.gif)     ![Alt Text](https://media.giphy.com/media/o6Z0a7SjU5JqNRF1Oe/giphy.gif)
