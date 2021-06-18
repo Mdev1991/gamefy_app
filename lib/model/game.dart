@@ -25,21 +25,22 @@ class GameModel {
   final String name;
 
   GameModel(
-      this.id,
-      this.cover,
-      this.createdAt,
-      this.firstRelease,
-      this.modes,
-      this.genres,
-      this.keywords,
-      this.platforms,
-      this.perspectives,
-      this.popularity,
-      this.screenshots,
-      this.summary,
-      this.videos,
-      this.rating,
-      this.name);
+    this.id,
+    this.cover,
+    this.createdAt,
+    this.firstRelease,
+    this.modes,
+    this.genres,
+    this.keywords,
+    this.platforms,
+    this.perspectives,
+    this.popularity,
+    this.screenshots,
+    this.summary,
+    this.videos,
+    this.rating,
+    this.name,
+  );
 
   GameModel.fromJson(Map<String, dynamic> json)
       : id = json["id"],

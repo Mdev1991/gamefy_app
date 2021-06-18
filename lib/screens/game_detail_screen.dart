@@ -264,7 +264,48 @@ class _GameDetailScreenState extends State<GameDetailScreen>
                             );
                           },
                         ),
-                      )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 10.0, bottom: 10.0, top: 15.0),
+                        child: Text(
+                          "Platforms".toUpperCase(),
+                          style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.greenAccent[400]),
+                        ),
+                      ),
+                      Container(
+                        height: 30.0,
+                        padding: EdgeInsets.only(left: 10.0, top: 5.0),
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: game.platforms.length,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: EdgeInsets.only(right: 10.0),
+                              child: Container(
+                                padding: EdgeInsets.all(5.0),
+                                decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.white)),
+                                child: Text(
+                                  game.platforms[index].name,
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      height: 1.4,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 9.0),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ],
                   ),
                   Column(

@@ -5,8 +5,8 @@ import 'package:GameFy/bloc/switch_bloc.dart';
 import 'package:GameFy/style/theme.dart' as Style;
 import 'package:GameFy/widgets/home_slider.dart';
 
-import 'bottom_tab_screens/discover_screen_grid.dart';
-import 'bottom_tab_screens/discover_screen_list.dart';
+import 'discover_screens/discover_screen_grid.dart';
+import 'discover_screens/discover_screen_list.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -16,7 +16,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   PageController _pageController;
   SwitchBloc _switchBloc;
-  GlobalKey bottomNavigationKey = GlobalKey();
   @override
   void initState() {
     super.initState();
