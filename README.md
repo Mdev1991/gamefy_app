@@ -22,4 +22,6 @@ Technologies:
 
 PREVIEW
 
-<iframe src="https://giphy.com/embed/o6Z0a7SjU5JqNRF1Oe" width="232" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/o6Z0a7SjU5JqNRF1Oe"></a></p>
+![Alt Text](https://media.giphy.com/media/X1hcGgPdiNgvVJvA3J/giphy.gif)
+
+![Alt Text](https://media.giphy.com/media/o6Z0a7SjU5JqNRF1Oe/giphy.gif)
